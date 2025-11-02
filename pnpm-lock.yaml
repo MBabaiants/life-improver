@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@nuxt/eslint':
         specifier: 1.10.0
-        version: 1.10.0(@typescript-eslint/utils@8.46.2(eslint@9.39.0(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.22)(eslint@9.39.0(jiti@2.6.1))(magicast@0.5.1)(typescript@5.9.3)(vite@7.1.12(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.1))
+        version: 1.10.0(@typescript-eslint/utils@8.46.2(eslint@9.39.0(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.22)(eslint@9.39.0(jiti@2.6.1))(magicast@0.5.1)(typescript@5.9.3)(vite-plugin-eslint2@5.0.4(eslint@9.39.0(jiti@2.6.1))(rollup@4.52.5)(vite@7.1.12(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.1)))(vite@7.1.12(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.1))
       '@nuxt/test-utils':
         specifier: 3.20.1
         version: 3.20.1(magicast@0.5.1)(typescript@5.9.3)
@@ -23,6 +23,9 @@ importers:
       nuxt:
         specifier: ^4.2.0
         version: 4.2.0(@parcel/watcher@2.5.1)(@vue/compiler-sfc@3.5.22)(db0@0.3.4)(eslint@9.39.0(jiti@2.6.1))(ioredis@5.8.2)(lightningcss@1.30.2)(magicast@0.5.1)(optionator@0.9.4)(rollup@4.52.5)(terser@5.44.0)(typescript@5.9.3)(vite@7.1.12(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.1))(yaml@2.8.1)
+      tailwindcss:
+        specifier: ^4.1.16
+        version: 4.1.16
       typescript:
         specifier: ^5.9.3
         version: 5.9.3
@@ -32,6 +35,10 @@ importers:
       vue-router:
         specifier: ^4.6.3
         version: 4.6.3(vue@3.5.22(typescript@5.9.3))
+    devDependencies:
+      vite-plugin-eslint2:
+        specifier: ^5.0.4
+        version: 5.0.4(eslint@9.39.0(jiti@2.6.1))(rollup@4.52.5)(vite@7.1.12(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.1))
 
 packages:
 
@@ -4402,6 +4409,20 @@ packages:
       vue-tsc:
         optional: true
 
+  vite-plugin-eslint2@5.0.4:
+    resolution: {integrity: sha512-3Yc7K2R/RrONB9JtwEh2Y40YP3tQi/3UiNHrwcYDsDBKDKnEu7B8PwmXLm7piDFRbxcnTPvgrV2LZnBpKP8JUw==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      '@types/eslint': ^7.0.0 || ^8.0.0 || ^9.0.0
+      eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
+      rollup: ^2.0.0 || ^3.0.0 || ^4.0.0
+      vite: ^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
+    peerDependenciesMeta:
+      '@types/eslint':
+        optional: true
+      rollup:
+        optional: true
+
   vite-plugin-inspect@11.3.3:
     resolution: {integrity: sha512-u2eV5La99oHoYPHE6UvbwgEqKKOQGz86wMg40CCosP6q8BkB6e5xPneZfYagK4ojPJSj5anHCrnvC20DpwVdRA==}
     engines: {node: '>=14'}
@@ -5344,7 +5365,7 @@ snapshots:
       - supports-color
       - typescript
 
-  '@nuxt/eslint@1.10.0(@typescript-eslint/utils@8.46.2(eslint@9.39.0(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.22)(eslint@9.39.0(jiti@2.6.1))(magicast@0.5.1)(typescript@5.9.3)(vite@7.1.12(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.1))':
+  '@nuxt/eslint@1.10.0(@typescript-eslint/utils@8.46.2(eslint@9.39.0(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.22)(eslint@9.39.0(jiti@2.6.1))(magicast@0.5.1)(typescript@5.9.3)(vite-plugin-eslint2@5.0.4(eslint@9.39.0(jiti@2.6.1))(rollup@4.52.5)(vite@7.1.12(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.1)))(vite@7.1.12(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.1))':
     dependencies:
       '@eslint/config-inspector': 1.3.0(eslint@9.39.0(jiti@2.6.1))
       '@nuxt/devtools-kit': 3.0.1(magicast@0.5.1)(vite@7.1.12(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.1))
@@ -5360,6 +5381,8 @@ snapshots:
       mlly: 1.8.0
       pathe: 2.0.3
       unimport: 5.5.0
+    optionalDependencies:
+      vite-plugin-eslint2: 5.0.4(eslint@9.39.0(jiti@2.6.1))(rollup@4.52.5)(vite@7.1.12(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.1))
     transitivePeerDependencies:
       - '@typescript-eslint/utils'
       - '@vue/compiler-sfc'
@@ -9513,6 +9536,17 @@ snapshots:
       eslint: 9.39.0(jiti@2.6.1)
       optionator: 0.9.4
       typescript: 5.9.3
+
+  vite-plugin-eslint2@5.0.4(eslint@9.39.0(jiti@2.6.1))(rollup@4.52.5)(vite@7.1.12(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.1)):
+    dependencies:
+      '@rollup/pluginutils': 5.3.0(rollup@4.52.5)
+      debug: 4.4.3
+      eslint: 9.39.0(jiti@2.6.1)
+      vite: 7.1.12(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.1)
+    optionalDependencies:
+      rollup: 4.52.5
+    transitivePeerDependencies:
+      - supports-color
 
   vite-plugin-inspect@11.3.3(@nuxt/kit@3.20.0(magicast@0.3.5))(vite@7.1.12(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.0)(yaml@2.8.1)):
     dependencies:
