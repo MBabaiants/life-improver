@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import tailwindcss from '@tailwindcss/vite'
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineNuxtConfig({
   modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxtjs/i18n', '@nuxt/test-utils'],
@@ -31,9 +31,9 @@ export default defineNuxtConfig({
   },
   i18n: {
     defaultLocale: 'en',
-    locales: [
-      { code: 'en', name: 'English', file: 'en.json' },
-      { code: 'ru', name: 'Russian', file: 'ru.json' },
-    ],
+    // locales: [
+    //   { code: 'en', name: 'English', file: 'en.json' },
+    //   { code: 'ru', name: 'Russian', file: 'ru.json' },
+    // ],
   },
-})
+});

@@ -1,10 +1,10 @@
-@import "tailwindcss";
-@import "@nuxt/ui";
+@import 'tailwindcss';
+@import '@nuxt/ui';
 
 :root {
   --ui-primary: var(--ui-color-black-800);
 }
 
 .dark {
-   --ui-color-neutral-900: var(--color-old-neutral-900, oklch(20.5% 0 0))
+  --ui-color-neutral-900: var(--color-old-neutral-900, oklch(20.5% 0 0));
 }
